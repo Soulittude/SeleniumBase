@@ -191,6 +191,12 @@ def main():
         add_text = "Agregar Texto"
         goodbye = "Adiós"
         class_name = "MiClaseDePrueba"
+    elif language == "Turkish":
+        hello = "Merhaba"
+        press_right_arrow = "Sağ ok tuşuna basın"
+        add_text = "Yazı Ekle"
+        goodbye = "Güle güle"
+        class_name = "BenimTestSınıfım"
 
     import_line = "from seleniumbase import BaseCase"
     main_line = "BaseCase.main(__name__, __file__)"

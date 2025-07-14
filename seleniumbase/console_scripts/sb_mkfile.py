@@ -246,6 +246,10 @@ def main():
         hello = "Hola"
         goodbye = "Adiós"
         class_name = "MiClaseDePrueba"
+    elif language == "Turkish":
+        hello = "Merhaba"
+        goodbye = "Güle güle"
+        class_name = "BenimTestSınıfım"
     url = ""
     if start_page:
         url = start_page

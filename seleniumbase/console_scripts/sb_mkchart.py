@@ -180,6 +180,11 @@ def main():
         item = "Objeto"
         select_option = "Seleccionar opción"
         chart_options = '"circular", "barras", "columnas", "líneas", "área"'
+    elif language == "Turkish":
+        class_name = "BenimTestSınıfım"
+        item = "Obje"
+        select_option = "Bir seçenek seçin"
+        chart_options = '"pasta", "bar", "sütun", "çizgi", "bölge"'
 
     import_line = "from seleniumbase import BaseCase"
     main_line = "BaseCase.main(__name__, __file__)"

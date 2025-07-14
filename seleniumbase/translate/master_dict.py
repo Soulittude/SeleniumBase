@@ -12,7 +12,7 @@ Translations
 7: Portuguese
 8: Russian
 9: Spanish
-T: Turkish
+10: Turkish
 """
 
 
