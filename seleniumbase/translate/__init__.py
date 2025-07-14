@@ -7,3 +7,4 @@ from seleniumbase.translate import korean  # noqa
 from seleniumbase.translate import portuguese  # noqa
 from seleniumbase.translate import russian  # noqa
 from seleniumbase.translate import spanish  # noqa
+from seleniumbase.translate import turkish # noqa

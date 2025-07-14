@@ -1,9 +1,9 @@
-# French / Français - Translations
+# Turkish / Türkçe - Translations
 from seleniumbase import BaseCase
 from seleniumbase import MasterQA
 
 
-class CasDeBase(BaseCase):
+class DurumTesti(BaseCase):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._language = "Turkish"
@@ -65,11 +65,11 @@ class CasDeBase(BaseCase):
         # get_text(selector, text)
         return self.get_text(*args, **kwargs)
 
-    def metin_kontrol(self, *args, **kwargs):
+    def yazı_kontrol(self, *args, **kwargs):
         # assert_text(text, selector)
         return self.assert_text(*args, **kwargs)
 
-    def kesin_metin_kontrol(self, *args, **kwargs):
+    def kesin_yazı_kontrol(self, *args, **kwargs):
         # assert_exact_text(text, selector)
         return self.assert_exact_text(*args, **kwargs)
 
@@ -77,11 +77,11 @@ class CasDeBase(BaseCase):
         # assert_link_text(link_text)
         return self.assert_link_text(*args, **kwargs)
 
-    def metin_doluluk_kontrol(self, *args, **kwargs):
+    def yazı_doluluk_kontrol(self, *args, **kwargs):
         # assert_non_empty_text(selector)
         return self.assert_non_empty_text(*args, **kwargs)
 
-    def metin_görünmezlik_kontrol(self, *args, **kwargs):
+    def yazı_görünmezlik_kontrol(self, *args, **kwargs):
         # assert_text_not_visible(text, selector)
         return self.assert_text_not_visible(*args, **kwargs)
 
@@ -608,15 +608,15 @@ class CasDeBase(BaseCase):
         # _print(msg)  # Same as Python print()
         return self._print(*args, **kwargs)
 
-    def reporté_vérifier_élément(self, *args, **kwargs):
+    def ertelenmiş_eleman_kontrolü(self, *args, **kwargs):
         # deferred_assert_element(selector)
         return self.deferred_assert_element(*args, **kwargs)
 
-    def reporté_vérifier_texte(self, *args, **kwargs):
+    def ertelenmiş_yazı_kontrolü(self, *args, **kwargs):
         # deferred_assert_text(text, selector="html")
         return self.deferred_assert_text(*args, **kwargs)
 
-    def effectuer_vérifications_reportées(self, *args, **kwargs):
+    def ertelenmiş_kontroller_işle(self, *args, **kwargs):
         # process_deferred_asserts(print_only=False)
         return self.process_deferred_asserts(*args, **kwargs)
 
@@ -661,7 +661,7 @@ class CasDeBase(BaseCase):
         return self.get_locale_code(*args, **kwargs)
 
 
-class MasterQA_Turkish(MasterQA, CasDeBase):
+class MasterQA_Turkish(MasterQA, DurumTesti):
     def kontrol(self, *args, **kwargs):
         # "Manual Check"
         self.DEFAULT_VALIDATION_TITLE = "Manuel kontrol"

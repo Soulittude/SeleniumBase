@@ -12,6 +12,7 @@ Translations
 7: Portuguese
 8: Russian
 9: Spanish
+T: Turkish
 """
 
 
@@ -30,6 +31,7 @@ class MD_F:
         languages.append("Portuguese")
         languages.append("Russian")
         languages.append("Spanish")
+        languages.append("Turkish")
         return languages
 
     def get_parent_classes_list():
@@ -44,6 +46,7 @@ class MD_F:
         parent_classes.append("CasoDeTeste")
         parent_classes.append("ТестНаСелен")
         parent_classes.append("CasoDePrueba")
+        parent_classes.append("DurumTesti")
         return parent_classes
 
     def get_masterqa_parent_classes_list():
@@ -58,6 +61,7 @@ class MD_F:
         parent_classes.append("MasterQA_Português")
         parent_classes.append("MasterQA_Русский")
         parent_classes.append("MasterQA_Español")
+        parent_classes.append("MasterQA_Türkçe")
         return parent_classes
 
     def get_parent_class_lang(parent_class):
@@ -72,6 +76,7 @@ class MD_F:
         parent_class_lang["CasoDeTeste"] = "Portuguese"
         parent_class_lang["ТестНаСелен"] = "Russian"
         parent_class_lang["CasoDePrueba"] = "Spanish"
+        parent_class_lang["DurumTesti"] = "Turkish"
         if parent_class not in parent_class_lang.keys():
             raise Exception(
                 "Invalid parent_class {%s} not in {%s}!"
@@ -91,6 +96,7 @@ class MD_F:
         parent_class_lang["MasterQA_Português"] = "Portuguese"
         parent_class_lang["MasterQA_Русский"] = "Russian"
         parent_class_lang["MasterQA_Español"] = "Spanish"
+        parent_class_lang["MasterQA_Turkish"] = "Turkish"
         if parent_class not in parent_class_lang.keys():
             raise Exception(
                 "Invalid parent_class {%s} not in {%s}!"
@@ -110,6 +116,7 @@ class MD_F:
         lang_parent_class["Portuguese"] = "CasoDeTeste"
         lang_parent_class["Russian"] = "ТестНаСелен"
         lang_parent_class["Spanish"] = "CasoDePrueba"
+        lang_parent_class["Turkish"] = "DurumTesti"
         if language not in lang_parent_class.keys():
             raise Exception(
                 "Invalid language {%s} not in {%s}!"
@@ -129,6 +136,7 @@ class MD_F:
         lang_parent_class["Portuguese"] = "MasterQA_Português"
         lang_parent_class["Russian"] = "MasterQA_Русский"
         lang_parent_class["Spanish"] = "MasterQA_Español"
+        lang_parent_class["Turkish"] = "DurumTesti"
         if language not in lang_parent_class.keys():
             raise Exception(
                 "Invalid language {%s} not in {%s}!"
@@ -168,6 +176,9 @@ class MD_F:
         import_line[
             "Spanish"
         ] = "from seleniumbase.translate.spanish import CasoDePrueba"
+        import_line[
+            "Turkish"
+        ] = "from seleniumbase.translate.turkish import DurumTesti"
         if language not in import_line.keys():
             raise Exception(
                 "Invalid language {%s} not in {%s}!"
@@ -207,6 +218,9 @@ class MD_F:
         import_line[
             "Spanish"
         ] = "from seleniumbase.translate.spanish import MasterQA_Español"
+        import_line[
+            "Turkish"
+        ] = "from seleniumbase.translate.turkish import MasterQA_Türkçe"
         if language not in import_line.keys():
             raise Exception(
                 "Invalid language {%s} not in {%s}!"
@@ -226,6 +240,7 @@ class MD_F:
         locale_codes["Portuguese"] = "pt"
         locale_codes["Russian"] = "ru"
         locale_codes["Spanish"] = "es"
+        locale_codes["Turkish"] = "tr"
         if language not in locale_codes.keys():
             raise Exception(
                 "Invalid language {%s} not in {%s}!"
@@ -245,6 +260,7 @@ class MD_F:
         locale_list.append("pt")
         locale_list.append("ru")
         locale_list.append("es")
+        locale_list.append("tr")
         return locale_list
 
 
@@ -261,6 +277,7 @@ class MD_L_Codes:
     lang["Portuguese"] = 7
     lang["Russian"] = 8
     lang["Spanish"] = 9
+    lang["Turkish"] = 10
 
 
 class MD:
